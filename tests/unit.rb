@@ -1,17 +1,15 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true
-
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../main'
 
-Minitest::Reporters.use!
-  Minitest::Reporters::HtmlReporter.new(
-    reports_dir: 'test',
-    report_filename: 'tests_results.html',
-    add_timestamp: true
-  )
+Minitest::Reporters.use! Minitest::Reporters::HtmlReporter.new(
+  reports_dir: 'C:/Users/marga/RubymineProjects/untitled/tests',
+  report_filename: 'simple_test_results.html',
+  add_timestamp: true
+)
+
 
 
 class MyTest < Minitest::Test
