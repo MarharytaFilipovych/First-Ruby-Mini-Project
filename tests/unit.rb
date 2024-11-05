@@ -1,14 +1,15 @@
 # frozen_string_literal: true
-
+require 'date'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../main'
 
 Minitest::Reporters.use! Minitest::Reporters::HtmlReporter.new(
-  reports_dir: 'C:/Users/marga/RubymineProjects/untitled/tests',
-  report_filename: 'simple_test_results.html',
+  reports_dir: 'C:/Users/marga/RubymineProjects/untitled/tests/unit_tests', # Create a separate folder for unit tests
+  report_filename: 'unit_test_results.html', # Unique filename for unit test results
   add_timestamp: true
 )
+
 
 
 
