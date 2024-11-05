@@ -77,9 +77,11 @@ describe Student do
 
   describe "#validate_date" do
     it "raises an ArgumentError for a future date" do
-      _(@student.validate_date("12-12-2026")).must_raise ArgumentError
+      _ { @student.validate_date("12-12-2074") }.must_raise ArgumentError
     end
   end
+
+
 
 
   after do
