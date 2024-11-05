@@ -60,6 +60,11 @@ class MyTest < Minitest::Test
     refute_includes Student.all, @student
   end
 
+  def test_validate_date
+    assert_raises(ArgumentError) do
+      @student.validate_date("12-12-2026")
+    end
+  end
   def teardown
     Student.all.clear
   end
